@@ -25,6 +25,53 @@ sudo pip3 install https://bit.ly/3C0PMVY
 ### requests package
 This library is used to make HTTP requests for communicating with ThingSpeak and Blynk APIs.
 
+Installation:
+```bash
+sudo pip3 install requests
+```
+### Standard Python libraries
+The following packages have been implemented in the project, all of which are included in Python's library and do not need to be installed:
+- time
+- datetime
+- socket
+- threading
+
+### Required Accounts & API Keys
+Before running the project, you will need to create accounts on Blynk and ThingSpeak, as these services are essential for monitoring and controlling your devices.
+
+## Blynk
+1. Go to the [Blynk web site](https://blynk.io/) and create an account.
+2. Create a new template for project and add the following datastreams:
+    - Name: Humidity
+    - Pin: V0
+    - Data Type: Double
+    - Units: Percentage, %
+    - Min: 0
+    - Max: 100
+
+    - Name: Soil Moisture
+    - Pin: V1
+    - Data Type: Double
+    - Units: Percentage, %
+    - Min: 0
+    - Max: 100
+
+    - Name: Dehumidifier
+    - Pin: V2
+    - Data Type: Integer
+    - Units: None
+    - Min: 0
+    - Max: 1
+3. Add two gauges to the Web Dashboard, one connected to V0 and labelled "Humidity" and the other connected to V1 and labelled "Soil Moisture".
+4. Add one switch to the Web Dashboard, connected to V2 ad labelled "Dehumidifier".
+5. Charts can be added as an additional step, connected to V0 (Humidity) and V1 (Soil Moisture) to view data trends.
+
+## ThingSpeak
+1. Go to the [ThingSpeak web site](https://thingspeak.mathworks.com/) and create an account.
+2. Create a new channel with the following input:
+    - Field 1: Humidity
+    - Field 2: Soil Moisture
+
 ## Installation
 1. Download files from repository.
 2. Transfer main.py, humidity_sensor.py, sensor_listener.py, and blynk.py scripts to Raspberry Pi via USB.

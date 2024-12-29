@@ -1,5 +1,30 @@
 # Installation & Execution Guide
 
+## Dependencies
+The following include the program's dependencies/prerequisites that must be installed before running the application.
+
+### Raspberry Pi Sense HAT
+Raspberry Pi Sense HAT has been used to measure humidity for project.
+
+#### sense-hat package
+sense-hat library allows interaction with the Raspberry Pi Sense HAT to collect humidity data from its sensor.
+
+Installation:
+```bash
+sudo apt-get install sense-hat
+```
+
+### Blynk dependencies
+Blynk dependencies allow interaction with the Raspberry Pi and Blynk for data logging, real-time monitoring, and notification alerts.
+
+Installation:
+```bash
+sudo pip3 install https://bit.ly/3C0PMVY
+```
+
+### requests package
+This library is used to make HTTP requests for communicating with ThingSpeak and Blynk APIs.
+
 ## Installation
 1. Download files from repository.
 2. Transfer main.py, humidity_sensor.py, sensor_listener.py, and blynk.py scripts to Raspberry Pi via USB.

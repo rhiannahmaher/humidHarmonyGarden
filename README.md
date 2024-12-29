@@ -115,9 +115,11 @@ The Raspberry Pi will begin listening for soil moisture data from Packet Tracer 
 ## Demonstration Video
 
 A brief demonstartion video is available to view here: [HumidHarmony Garden - Demonstration Video](https://youtu.be/QZykZ2LLIKY)
+
 ## Issues
-Soil moisture data has been simulated in Packet Tracer. There is a limitation of real sensor data for this aspect of the program.
-ThingSpeak and Blynk platforms have usage limits on free accounts, which can cause issues with frequent data logging.
+- Soil moisture data has been simulated in Packet Tracer. There is a limitation of real sensor data for this aspect of the program.
+- ThingSpeak and Blynk platforms have usage limits on free accounts, which can cause issues with frequent data logging.
+- Program could better implement security features such as using a switch and TCP protocols.
 
 ## Libraries and Tools
 - Raspberry Pi: Serves as the core hardware platform for running the HumidHarmony Garden system. Manages humidity sensor, listens and reads soil moisture data and simulates controlling the dehumidifier by displaying green LEDs. [Raspberry Pi Documentation](https://www.raspberrypi.com/documentation/)

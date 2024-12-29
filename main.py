@@ -2,10 +2,9 @@
 
 import threading
 import time
-import datetime
 from sense_hat import SenseHat
 from blynk import run as blynk_humidity_run
-from sensor_listener import handle_data,SensorListener
+from sensor_listener import handle_data, SensorListener
 from humidity_sensor import run as humidity_run
 
 def main():
@@ -15,7 +14,7 @@ def main():
     print("")
 
     # Threading has been used to esure all scripts run in conjunction and do not block
-    # each other when running [Ref 1]
+    # each other when running 
 
     # First thread runs humidity reading from RaspPi/data transfer to ThingSpeak
     humidity_thread = threading.Thread(target=humidity_run)

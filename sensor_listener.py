@@ -3,7 +3,6 @@
 
 import socket
 import threading
-import time
 import datetime
 import requests
 import BlynkLib
@@ -17,8 +16,11 @@ sense.clear()
 thingspeak_write_api_key = "WCI036N97YKBCC11"
 thingspeak_channel_url = "https://api.thingspeak.com/update"
 
-# Initialise the Blynk instance
-blynk = BlynkLib.Blynk("WNvDqX_B3rDIaDe_EcfJVX2y8GsDUMxS")
+# Blynk authentication token
+blynk_auth = "WNvDqX_B3rDIaDe_EcfJVX2y8GsDUMxS"
+
+# Initialise Blynk instance
+blynk = BlynkLib.Blynk(blynk_auth)
 
 def send_moisture_to_thingspeak(moisture):
     payload = {
@@ -34,7 +36,7 @@ def send_moisture_to_thingspeak(moisture):
         print(f"Failed to send data. Status code: {response.status_code}")
 
 class SensorListener:
-    def __init__(self, host='0.0.0.0', port=5000, buffer_size=1024):
+    def __init__(self, host="0.0.0.0", port=5000, buffer_size=1024):
         self.host = host
         self.port = port
         self.buffer_size = buffer_size
@@ -74,8 +76,8 @@ class SensorListener:
 def handle_data(data):
     try:
         # Returns numeric moisture data from Packet Tracer
-        moisture_str = data.split(":")[1].strip().replace('%', '') # [Ref 4]
-        moisture = int(moisture_str)
+        moisture_str = data.split(":")[1].strip().replace("%", "") # Splits "Moisture levels: {moisture}" by ":" and returns the numeric data only
+        moisture = float(moisture_str)
         print(f"Processing data: Moisture level: {moisture}%")
 
         # Moisture data is transferred to ThingSpeak
@@ -93,7 +95,6 @@ def handle_data(data):
         print(f"Error processing data: {e}")
 
 if __name__ == "__main__":
-
     listener = SensorListener(port=5000)
     listener.callback=handle_data
     listener.start()

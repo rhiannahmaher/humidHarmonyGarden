@@ -10,9 +10,9 @@ sense = SenseHat()
 sense.clear()
 
 # Blynk authentication token
-blynk_auth = 'WNvDqX_B3rDIaDe_EcfJVX2y8GsDUMxS'
+blynk_auth = "WNvDqX_B3rDIaDe_EcfJVX2y8GsDUMxS"
 
-# Initialise the Blynk instance
+# Initialise Blynk instance
 blynk = BlynkLib.Blynk(blynk_auth)
 
 # Registers handler for virtual pin V2 (switch) write event on Blynk
@@ -21,9 +21,9 @@ blynk = BlynkLib.Blynk(blynk_auth)
 def handle_v2_write(value):
     button_value = value[0]
 
-    if button_value == '0':
+    if button_value == "0":
         print("Dehumidifier status: OFF")
-    elif button_value == '1':
+    elif button_value == "1":
         print("Dehumidifier status: ON")
 
 # Main loop keeps Blynk connection alive and processes events
@@ -54,3 +54,6 @@ def run():
             sleep(1)
     except KeyboardInterrupt:
         print("Blynk application stopped.")
+
+if __name__ == "__main__":
+    run()

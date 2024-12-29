@@ -40,7 +40,7 @@ def get_humidity():
 def read_humidity():
     humidity = get_humidity()
 
-    current_datetime = datetime.datetime.now() # [Ref 3]
+    current_datetime = datetime.datetime.now()
     datetime_string = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
 
     print("Reading humidity...")

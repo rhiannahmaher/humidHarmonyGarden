@@ -1,4 +1,4 @@
-# Script listens for events from Packet Tracera dn reads moisture data.
+# Script listens for events from Packet Tracer and reads moisture data.
 # Moisture data is then transferred to ThingSpeak and Blynk for data logging
 
 import socket

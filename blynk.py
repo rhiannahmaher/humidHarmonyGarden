@@ -42,13 +42,13 @@ def run():
             if humidity > 50:
                 print("Dehumidifier status: ON")
                 blynk.virtual_write(2, 1)
-                #blynk.log_event("high_humidity_event", f"High Humidity Detected! Humidity Level: {humidity}%")
+                blynk.log_event("high_humidity_event", f"High Humidity Detected! Humidity Level: {humidity}%")
                 sleep(14) # Dehumidifier is kept ON
                 print("Dehumidifier status: OFF")
                 blynk.virtual_write(2, 0) # Dehumidifier is then switched back off
             elif humidity < 30:
                 blynk.virtual_write(2,0)
-                #blynk.log_event("low_humidity_event", f"Low Humidity Detected! Humidity Level: {humidity}%")
+                blynk.log_event("low_humidity_event", f"Low Humidity Detected! Humidity Level: {humidity}%")
             else:
                 blynk.virtual_write(2, 0)
             sleep(1)

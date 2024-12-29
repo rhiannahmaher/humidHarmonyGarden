@@ -1,4 +1,4 @@
-# Script reads humidity from SenseHat and dislays humidity data to console.
+# Script reads humidity from Sense HAT and displays humidity data to console.
 # Data is then transferred to ThingsSpeak for data logging.
 
 from sense_hat import SenseHat

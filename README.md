@@ -133,4 +133,4 @@ A brief demonstartion video is available to view here: [HumidHarmony Garden - De
 - Introduction to Blynk: [Introduction](https://docs.blynk.io/en)
 - Introduction to ThingSpeak: [An Introduction to ThingSpeak](https://www.codeproject.com/Articles/845538/An-Introduction-to-ThingSpeak)
 - Packet Tracer Tutorials: [Official Packet Tracer Tutorials](https://tutorials.ptnetacad.net/)
-- Setting up the Raspberry Pi Sense HAT: (Getting started with the Sense HAT)[https://projects.raspberrypi.org/en/projects/getting-started-with-the-sense-hat]
+- Setting up the Raspberry Pi Sense HAT: [Getting started with the Sense HAT](https://projects.raspberrypi.org/en/projects/getting-started-with-the-sense-hat)

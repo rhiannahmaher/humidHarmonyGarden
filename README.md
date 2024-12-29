@@ -112,13 +112,12 @@ python main.py
 ``` 
 The Raspberry Pi will begin listening for soil moisture data from Packet Tracer as well as generating humidity readings from Sense HAT.
 
+## Demonstration Video
+
+A brief demonstartion video is available to view here: [HumidHarmony Garden - Demonstration Video](https://youtu.be/QZykZ2LLIKY)
 ## Issues
 Soil moisture data has been simulated in Packet Tracer. There is a limitation of real sensor data for this aspect of the program.
 ThingSpeak and Blynk platforms have usage limits on free accounts, which can cause issues with frequent data logging.
-
-## Authors
-ex. Rhiannah Maher
-ex. 20085527@mail.wit.ie
 
 ## Libraries and Tools
 - Raspberry Pi: Serves as the core hardware platform for running the HumidHarmony Garden system. Manages humidity sensor, listens and reads soil moisture data and simulates controlling the dehumidifier by displaying green LEDs. [Raspberry Pi Documentation](https://www.raspberrypi.com/documentation/)
@@ -127,14 +126,6 @@ ex. 20085527@mail.wit.ie
 - Packet Tracer: Used for testing without physical hardware to simulate the soil moisture sensor. [Cisco Packet Tracer](https://www.netacad.com/cisco-packet-tracer)
 - Blynk: Cloud-based IoT platform used for real-time monitoring via a mobile or web application, providing notifications and live sensor data logging. [Blynk web site](https://blynk.io/)
 - ThingSpeak: Cloud-based IoT platform used for real-time monitoring via a web application, providing email alerts and live sensor data logging. [ThingSpeak web site](https://thingspeak.mathworks.com/)
-
-## References
-- Logic for constructing datetime strings: [How to Get Current Date and Time using Python](https://www.geeksforgeeks.org/get-current-date-and-time-using-python/)
-- Logic for creating statements during Blynk events: [Events](https://docs.blynk.io/en/getting-started/events-tutorial?_gl=1*evpn25*_ga*MTY0NjgwODIxNi4xNzMzNjgwMzc1*_ga_L7QGLC416F*MTczNTQyMDgzNC4xMy4xLjE3MzU0MjI0NDUuMC4wLjA.*_ga_E376ZQ635Y*MTczNTQyMDgzMS4xMS4xLjE3MzU0MjI0NDUuMC4wLjA.)
-- Logic for reading numeric data from Packet Tracer: [Remove all whitespace in a string](https://stackoverflow.com/questions/8270092/remove-all-whitespace-in-a-string)
-- Logic for reading numeric data from Packet Tracer: [Python: Split, strip, and join in one line](https://stackoverflow.com/questions/12381408/python-split-strip-and-join-in-one-line)
-- Logic for threading used: [Multithreading in Python](https://www.geeksforgeeks.org/multithreading-python-set-1/)
-- Random uniform logic: [Python Random uniform() Method](https://www.w3schools.com/python/ref_random_uniform.asp)
 
 ## Further Learning/Resources
 - Introduction to Blynk: [Introduction](https://docs.blynk.io/en)
